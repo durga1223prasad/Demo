@@ -1,19 +1,24 @@
+import java.util.Scanner;
 class Student6{
-int id;
-String name;
-Student6(int i,String n){
-id=i;
-name=n;
+private int id;
+private String name;
+public void setId(int id){this.id=id;}
+public void setName(String name){this.name=name;}
+public int getId(){return this.id;}
+public String getName(){return this.name;}
 }
-Student6(Student6 s){
-id=s.id;
-name=s.name; 
-}void display(){System.out.println(id+" "+name);}
+class Day2{
 public static void main(String args[]){
-Student6 s1=new Student6(111,"vk");
-Student6 s2=new Student6(s1);
-s1.display();
-s2.display();
+Scanner sc=new Scanner(System.in);
+Student6[] ob=new Student6[3];
+for(int i=0;i<3;i++){
+ob[i]=new Student6();
+ob[i].setId(sc.nextInt());
+ob[i].setName(sc.next());
 }
+System.out.println("Details are:\n");
+for(int j=0;j<3;j++){
+System.out.println("ID:"+ob[j].getId());
+System.out.println("Name:"+ob[j].getName());
 }
-
+}}
