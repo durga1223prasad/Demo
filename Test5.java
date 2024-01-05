@@ -1,8 +1,12 @@
-import java.util.Scanner;
 class Test5{
 public static void main(String args[]){
-Scanner scob=new Scanner(System.in);
-char c=scob.next().charAt(0);
-if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u')System.out.println("YES");
-else System.out.println("NO");
-}}
+int i=0;
+int sum=0;
+for(i=0;i<=100;i++)
+{System.out.print(i+"+");
+sum=sum+i;
+i=i+4;
+}
+System.out.print("\b"+"="+sum);
+}
+}

@@ -1,15 +1,13 @@
 class A{
-public void funA1(){
-System.out.print("FunA1 called from class A");
+void m(){System.out.println("hello m");}
+void n(){
+System.out.println("hello n");
+this.m();
 }
-public void funA2(){
-System.out.print("FunA2 called from class A");
 }
-}
-class B
-{
+class TestThis4{
 public static void main(String args[]){
 A a=new A();
-a.funA1();
-a.funA2();
-}}
+a.n();
+}
+}

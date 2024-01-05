@@ -1,9 +1,19 @@
 class Student{
-int id;
+int rollno;
 String name;
+static String college="MTIE";
+Student(int r, String n){
+rollno=r;
+name=n;
+}
+void display(){System.out.println(rollno+""+name+""+college);}
+}
+class TestStaticVariable1{
 public static void main(String args[]){
-Student s1=new Student();
-System.out.println(s1.id);
-System.out.println(s1.name);
+Student s1=new Student(111, "Dhruva");
+Student s2=new Student(222, "Cherry");
+Student.college="MTIET";
+s1.display();
+s2.display();
 }
 }
