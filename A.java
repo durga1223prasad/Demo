@@ -1,0 +1,15 @@
+class A{
+public void funA1(){
+System.out.print("FunA1 called from class A");
+}
+public void funA2(){
+System.out.print("FunA2 called from class A");
+}
+}
+class B
+{
+public static void main(String args[]){
+A a=new A();
+a.funA1();
+a.funA2();
+}}
