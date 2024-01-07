@@ -1,12 +1,22 @@
-class A1{
-A1(){System.out.println("hello a from default constructor");}
-A1(int x){
-this();
-System.out.println(x);
+class A{
+void eat(){
+System.out.println("starving....");
 }
-}
-class TestThis5{
+}//A
+class Animal extends A{
+void eat(){System.out.println("eating......");}
+}//Animal
+class Dog extends Animal{
+void eat(){System.out.println("eating bread....");}
+void bark(){System.out.println("bark....");}
+void work(){
+super.eat();
+bark();
+}//bark()
+}//Dog
+class Test{
 public static void main(String args[]){
-A1 a=new A1(10);
+Dog d=new Dog();
+d.work();
 }
 }
